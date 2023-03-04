@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  font-family: 'Space Grotesk', sans-serif;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#blob {
+  background-color: white;
+  height: 200px;
+  aspect-ratio: 1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  border-radius: 50%;
+  background-image: linear-gradient(to right, #751532 0%, #fee140 100%);
+  animation: rotate 20s infinite;
+}
+
+@keyframes rotate {
+  from {
+    rotate: 0deg;
+  }
+  50% {
+    scale: 1 1.5;
+  }
+  to {
+    rotate: 360deg;
+  }
+}
+
+.blur {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  z-index: 2;
+  backdrop-filter: blur(200px);
+}
+
+nav {
+  color: white;
+  position: absolute;
+  z-index: 3;
+  top: 7%;
+  left: 4%;
+}
+
+nav h1 {
+  letter-spacing: 15px;
+}
+
+#logo2 {
+  position: relative;
+  font-weight: lighter;
+}
+
+footer {
+  position: absolute;
+  z-index: 3;
+  color: white;
+  bottom: 0;
+  left: 4%;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer h2 {
+  font-weight: lighter;
+  font-size: 1.5vw;
+}
+
+.footer-div {
+  width: fit-content;
+}
+
+.footer-div p {
+  color: white;
+  margin: 0rem;
+  text-transform: uppercase;
+  font-size: 1.5vw;
+}
+
+.line {
+  display: flex;
+  justify-content: space-between;
+}
+
+a {
+  text-transform: uppercase;
+  font-size: 1.5vw;
+}
+
+#text:has(.fancy:hover) .word:not(.fancy:hover) {
+  opacity: 0.2;
+}
+
+.fancy span {
+  display: inline-block;
+}
+
+.fancy > .outer {
+  transition: transform 350ms ease;
+}
+
+.fancy:hover > .outer {
+  transition-duration: 800ms;
+}
+
+.fancy:hover > .outer > .inner {
+  animation: float 5s ease infinite;
+}
+
+.fancy:hover > .outer > .inner > .letter {
+  background-size: 1000%;
+  animation: background-pan 150s linear infinite;
+  background: rgb(34, 193, 195);
+  background: linear-gradient(
+    0deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(253, 187, 45, 1) 100%
+  );
+  text-decoration: underline;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.fancy:hover > .outer:nth-child(1) {
+  transform: translate(-80%, 60%) rotate(8deg);
+}
+
+.fancy:hover > .outer:nth-child(2) {
+  transform: translate(-40%, 20%) rotate(4deg);
+}
+
+.fancy:hover > .outer:nth-child(3) {
+  transform: translate(-10%, 60%) rotate(-6deg);
+}
+
+.fancy:hover > .outer:nth-child(4) {
+  transform: translate(0%, 8%) rotate(-8deg);
+}
+
+.fancy:hover > .outer:nth-child(5) {
+  transform: translate(0%, -20%) rotate(5deg);
+}
+
+.fancy:hover > .outer:nth-child(6) {
+  transform: translate(0%, 20%) rotate(-3deg);
+}
+
+.fancy:hover > .outer:nth-child(7) {
+  transform: translate(0%, -40%) rotate(-5deg);
+}
+
+.fancy:hover > .outer:nth-child(8) {
+  transform: translate(0%, 15%) rotate(10deg);
+}
+
+.fancy:hover > .outer:nth-child(9) {
+  transform: translate(0%, -50%) rotate(8deg);
+}
+
+.fancy:hover > .outer:nth-child(10) {
+  transform: translate(0%, 15%) rotate(-6deg);
+}
+
+.fancy:hover > .outer:nth-child(11) {
+  transform: translate(50%, -10%) rotate(-3deg);
+}
+
+.fancy:hover > .outer:nth-child(12) {
+  transform: translate(120%, -30%) rotate(-10deg);
+}
+
+
+main{
+  position: relative;
+  z-index: 4;
+}
