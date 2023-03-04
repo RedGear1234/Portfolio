@@ -187,18 +187,17 @@ main{
   position: relative;
   z-index: 2;
   left:18%;
-  top: 23%;
-  border:  1px solid red;
-  width:fit
+  top: 50%;
+  width: fit-content;
 }
 
-#image-tarck {
+#image-track {
   display: flex;
   gap: 4vmin;
   position: absolute;
   left: 50%;
   top: 50%;
-  border:  1px solid white;
+  transform: translate(0%, -50%);
 }
 
 #image-track > .image{
