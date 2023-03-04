@@ -106,9 +106,12 @@ window.onmousemove = (e) => {
   track.dataset.percentage = nextPercentage;
   track.style.transform = `translate(${percentage}%, -50%)`;
 
-  track.animate({
-    transform: `translate(${nextPercentage})%, -50%`
-  }, { duration: 1200, fill: "forwards" });
+  track.animate(
+    {
+      transform: `translate(${nextPercentage})%, -50%`,
+    },
+    { duration: 1200, fill: "forwards" }
+  );
 
   Math.min(nextPercentage, 10);
   Math.max(nextPercentage, -100);
@@ -116,9 +119,12 @@ window.onmousemove = (e) => {
   // Images Parllex
   for (const image of track.getElementsByClassName("image")) {
     image.style.objectPosition = `${percentage + 100}% 50%`;
-    image.animate({
-      objectPosition: `${100 + nextPercentage}% center`
-    }, { duration: 1200, fill: "forwards" });
+    image.animate(
+      {
+        objectPosition: `${100 + nextPercentage}% center`,
+      },
+      { duration: 1200, fill: "forwards" }
+    );
   }
 };
 
