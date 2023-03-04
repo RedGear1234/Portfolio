@@ -198,6 +198,7 @@ main{
   left: 50%;
   top: 50%;
   transform: translate(0%, -50%);
+  border: 1px solid white;
 }
 
 #image-track > .image{
@@ -205,4 +206,5 @@ main{
   height: 45vmin;
   object-fit: cover;
   object-position: center;
+  border: 1px solid red;
 }
